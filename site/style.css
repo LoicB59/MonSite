@@ -1,0 +1,750 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: sans-serif;
+}
+
+
+.max-width{
+	max-width: 1300px;
+	padding: 0 80px;
+	margin: auto;
+}
+ /*Barre navigation*/
+.navbar
+{
+	position: fixed;
+	width: 100%;
+	padding: 30px 0;
+	background: #111;
+	font-family: sans-serif;
+}
+
+.navbar .max-width{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar .logo a{
+	color: #fff;
+	font-size: 35px;
+	font-weight: 600;
+}
+
+.navbar .logo a span{
+	color: #960000;
+}
+
+.navbar .menu li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+
+.navbar .menu li a{
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.navbar .menu li a::after{
+	content: '';
+	height: 3px;
+	width: 0;
+	background: #960000;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition:0.5s;
+}
+
+.navbar .menu li a:hover:after{
+	width: 100%;
+}
+
+/*Menu Bouton*/
+.BoutonMenu{
+	color: #fff;
+    font-size: 20px;
+	display: none;
+	cursor: pointer;
+}
+
+.BoutonMenu i{
+	cursor: pointer;
+}
+
+/*Responsive*/
+@media (max-width : 930px){
+	.max-width{
+		padding: 0 50px;
+	}
+	
+	.BoutonMenu{
+		color: #fff;
+		font-size: 30px;
+		cursor: pointer;
+		display: block;
+		z-index: 999;
+	}
+	
+	.BoutonMenu i.active:before{
+		content: "\f00d";
+	}
+	
+	.navbar .logo a{
+		font-size: 25px;
+	}
+	
+	.navbar .menu{
+		position: fixed;
+		height: 100vh;
+		width: 100%;
+		right: -100%;
+		z-index:999;
+		top: 0;
+		background: #111;
+		text-align: center;
+		padding-top: 100px;
+		transition: all 0.3s ease;
+	}
+	
+	.navbar .menu.active{
+		right:0;
+	}
+	
+	.navbar .menu li{
+		display: block;
+	}
+	.navbar .menu li a{
+		display: inline-block;
+		margin: 20px 0;
+		font-size: 25px;
+	}
+	
+	.navbar .menu li a::after{
+		content: '';
+		height: 2px;
+		width: 0;
+		background: #960000;
+		position: absolute;
+		right: 0;
+		bottom: 10px;
+		transition: 0.5s;
+	}
+
+	.navbar .menu li a:hover:after{
+		width: 100%;
+	}
+	
+	.intro .titre{
+		position: relative;
+		text-align: center;
+		font-size: 40px;
+		font-weight: 500;
+		margin-bottom: 60px;
+		padding-bottom: 20px;
+		font-family: sans-serif;
+		z-index: -1;
+	}
+	
+	.intro .titre::before{
+		content: "";
+		position: absolute;
+		bottom: 0px;
+		left: 50%;
+		width: 200px;
+		height: 3px;
+		background: #960000;
+		transform: translateX(-50%);
+	}
+}
+
+/*Introduction*/
+
+section{
+	padding: 120px 0;
+}
+
+.intro{
+	font-family: sans-serif;
+}
+
+.intro .titre{
+	position: relative;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 500;
+	margin-bottom: 60px;
+	padding-bottom: 20px;
+	font-family: sans-serif;
+	z-index: -1;
+}
+.intro .titre::before{
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	width: 200px;
+	height: 3px;
+	background: #960000;
+	transform: translateX(-50%);
+}
+
+.intro .presentation{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.intro .presentation .colonneG{
+	width: 45%;
+}
+
+.intro .presentation .colonneG img{
+	height: 400px;
+	width: 250px;
+	object-fit: cover;
+	padding-bottom: 40px;
+}
+
+.intro .presentation .colonneD{
+	width: 55%;
+	font-size: 25px;
+}
+
+.intro .presentation .colonneD p{
+	text-align: justify;
+}
+
+.intro .pourquoiCommencer{
+	font-size: 25px;
+	text-align: justify;
+	padding-bottom: 40px;
+}
+
+.intro .commentCommencer{
+	font-size: 25px;
+	text-align: justify;
+	padding-bottom: 40px;
+}
+
+.intro .commentCommencer .top img{
+	max-inline-size: 100%;
+	block-size: auto;
+	height: 400px;
+	width: 100%;
+	object-fit: cover;
+	padding-bottom: 40px;
+}
+
+.intro .differentesPratiques{
+	font-size: 25px;
+	text-align: justify;
+	padding-bottom: 40px;
+}
+
+.intro .differentesPratiques a span{
+	color: #960000;
+	cursor: pointer;
+}
+
+
+/*Pratiques*/
+
+section{
+	padding: 120px 0;
+}
+
+.intro{
+	font-family: sans-serif;
+}
+
+.intro .titre{
+	position: relative;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 500;
+	margin-bottom: 60px;
+	padding-bottom: 20px;
+	font-family: sans-serif;
+	z-index: -1;
+}
+.intro .titre::before{
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	width: 200px;
+	height: 3px;
+	background: #960000;
+	transform: translateX(-50%);
+}
+
+
+.intro .differentsDomaines{
+	font-size: 25px;
+	text-align: justify;
+	padding-bottom: 40px;
+}
+
+.intro .differentsDomaines .top img{
+	max-width: 100%;
+	height: auto;
+	/*object-fit: cover;*/
+	padding-bottom: 40px;
+}
+
+.intro .differentsDomaines a span{
+	color: #960000;
+	cursor: pointer;
+}
+
+.intro .Conseils{
+	font-size: 25px;
+	text-align: justify;
+	padding-bottom: 40px;
+}
+
+.intro .Bodybuilding{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.intro .Bodybuilding .colonneG{
+	width: 45%;
+	float: left;
+}
+
+.intro .Bodybuilding .colonneG img{
+	height: 400px;
+	width: 250px;
+	object-fit: cover;
+	margin-bottom: 60px;
+	padding-bottom: 40px;
+	margin-right: auto;
+	display: block;
+}
+
+.intro .Bodybuilding .colonneD{
+	width: 55%;
+	font-size: 25px;
+	float: right;
+}
+
+.intro .Bodybuilding .colonneD p{
+	text-align: justify;
+}
+
+.intro .Bodybuilding a span{
+	color: #960000;
+	cursor: pointer;
+}
+
+.intro .Powerlifting{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.intro .Powerlifting .colonneD{
+	width: 45%;
+	float:right;
+}
+
+.intro .Powerlifting .colonneD img{
+	height: 400px;
+	width: 250px;
+	object-fit: cover;
+	margin-bottom: 60px;
+	padding-bottom: 40px;
+	margin-left: auto;
+	display: block;
+}
+
+.intro .Powerlifting .colonneG{
+	float:left;
+	width: 55%;
+	font-size: 25px;
+	padding-bottom: 40px;
+}
+
+.intro .Powerlifting .colonneG p{
+	text-align: justify;
+}
+
+.intro .Powerlifting a span{
+	color: #960000;
+	cursor: pointer;
+}
+
+.intro .Streetworkout{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.intro .Streetworkout .colonneG{
+	width: 45%;
+	float: left;
+}
+
+.intro .Streetworkout .colonneG img{
+	height: 400px;
+	width: 250px;
+	object-fit: cover;
+	padding-bottom: 40px;
+}
+
+.intro .Streetworkout .colonneD{
+	width: 55%;
+	font-size: 25px;
+	float: right;
+}
+
+.intro .Streetworkout .colonneD p{
+	text-align: justify;
+	padding-bottom: 40px;
+}
+
+.intro .Crossfit{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.intro .Crossfit .colonneD{
+	width: 45%;
+	float:right;
+}
+
+.intro .Crossfit .colonneD img{
+	height: 400px;
+	width: 250px;
+	object-fit: cover;
+	margin-bottom: 60px;
+	padding-bottom: 40px;
+	margin-left: auto;
+	display: block;
+}
+
+.intro .Crossfit .colonneG{
+	float:left;
+	width: 55%;
+	font-size: 25px;
+	padding-bottom: 40px;
+}
+
+.intro .Crossfit .colonneG p{
+	text-align: justify;
+}
+
+/*Alimentation*/
+/*Role*/
+.intro .Role{
+	font-size: 25px;
+	text-align: justify;
+	padding-bottom: 40px;
+}
+
+.intro .Role .top img{
+	max-width: 100%;
+	height: auto;
+	/*object-fit: cover;*/
+	padding-bottom: 40px;
+}
+
+.intro .Role a span{
+	color: #960000;
+	cursor: pointer;
+}
+
+/*Prise de masse*/
+.intro .PDM{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.intro .PDM .colonneD{
+	width: 45%;
+	float:right;
+}
+
+.intro .PDM .colonneD img{
+	height: 400px;
+	width: 250px;
+	object-fit: cover;
+	margin-bottom: 60px;
+	padding-bottom: 40px;
+	margin-left: auto;
+	display: block;
+}
+
+.intro .PDM .colonneG{
+	float:left;
+	width: 55%;
+	font-size: 25px;
+	padding-bottom: 40px;
+}
+
+.intro .PDM .colonneG p{
+	text-align: justify;
+}
+
+
+/*Sèche*/
+.intro .Seche{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.intro .Seche .colonneG{
+	width: 45%;
+	float: left;
+}
+
+.intro .Seche .colonneG img{
+	height: 400px;
+	width: 250px;
+	object-fit: cover;
+	padding-bottom: 40px;
+}
+
+.intro .Seche .colonneD{
+	width: 55%;
+	font-size: 25px;
+	float: right;
+}
+
+.intro .Seche .colonneD p{
+	text-align: justify;
+	padding-bottom: 40px;
+}
+
+.intro .Seche a span{
+	color: #960000;
+	cursor: pointer;
+}
+
+/*Compléments alimentaires*/
+.intro .Complement{
+	font-size: 25px;
+	text-align: justify;
+	padding-bottom: 40px;
+}
+
+.intro .Complement .top img{
+	max-width: 100%;
+	height: auto;
+	/*object-fit: cover;*/
+	padding-bottom: 40px;
+}
+
+.intro .Complement a span{
+	color: #960000;
+	cursor: pointer;
+}
+
+/*Sous titre*/
+.intro .soustitre{
+	margin-top: 60px;
+	position: relative;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 800;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	font-family: sans-serif;
+	z-index: -1;
+}
+
+.intro .APropos{
+	font-size: 25px;
+	text-align: justify;
+	padding-bottom: 40px;
+}
+
+
+/*footer*/
+.piedpage{
+	width: 100%;
+	background-color: black;
+	padding: 0px 0px 50px 0px;
+	text-transform: none;
+	font-size: 20px;
+	display:flex;
+	justify-content:space-between;
+}
+
+.piedpage .SousColonne{
+	color: white;
+	font-size: 25px;
+	margin-bottom: 10px;
+	margin: 45px;
+}
+
+.piedpage .liste{
+	margin: 45px;
+}
+
+.piedpage a{
+	color: #960000;
+}
+
+
+/*Contact*/
+
+.intro .contacter{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.intro .contacter .colonneG{
+	width: 25%;
+	float: left;
+}
+
+.intro .contacter .colonneG img{
+	height: 50px;
+	width: 50px;
+}
+
+.intro .contacter .colonneD{
+	width: 75%;
+	font-size: 25px;
+	float: right;
+}
+
+.intro .contacter .colonneD p{
+	text-align: justify;
+}
+
+.intro .contacter a span{
+	color: #960000;
+	cursor: pointer;
+}
+
+/*Introduction responsive*/
+@media (max-width : 930px){
+
+	.section{
+		padding: 100px;
+	}
+
+	.intro .titre{
+		position: relative;
+		text-align: center;
+		font-size: 30px;
+		font-weight: 500;
+		margin-bottom: 40px;
+		padding-bottom: 10px;
+		font-family: sans-serif;
+		z-index: -1;
+	}
+	.intro .titre::before{
+		content: "";
+		position: absolute;
+		bottom: 0px;
+		left: 50%;
+		width: 100px;
+		height: 2px;
+		background: #960000;
+		transform: translateX(-50%);
+	}
+
+
+	.intro .presentation .colonneG img{
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		padding-bottom: 30px;
+		width: 65%;
+	}
+
+	.intro .presentation .colonneD{
+		width: 55%;
+		font-size: 20px;
+		padding-bottom:30px;
+	}
+
+	.intro .presentation .colonneD p{
+		text-align: justify;
+	}
+
+	.intro .pourquoiCommencer{
+		font-size: 20px;
+		text-align: justify;
+		padding-bottom: 30px;
+	}
+
+	.intro .commentCommencer{
+		font-size: 20px;
+		text-align: justify;
+		padding-bottom: 30px;
+	}
+
+	.intro .commentCommencer .top img{
+		max-inline-size: 100%;
+		block-size: auto;
+		height: 200px;
+		width: 100%;
+		object-fit: cover;
+		padding-bottom: 30px;
+	}
+
+	/*.intro .differentesPratiques{
+		font-size: 20px;
+		text-align: justify;
+		padding-bottom: 30px;
+	}*/
+
+	.intro p{
+		font-size: 20px;
+		text-align: justify;
+		padding-bottom: 30px;
+	}
+	
+}
+
+/*footer responsive*/
+@media (max-width : 930px){
+
+	.footer{
+		padding:100px;
+	}
+
+	.piedpage{
+		padding: 0px 0px 25px 0px;
+		text-transform: none;
+		font-size: 15px;
+		display:flex;
+		justify-content:space-between;
+		display:block;
+		text-align: center;
+	}
+
+	.piedpage .SousColonne{
+		font-size: 20px;
+		margin-bottom: 10px;
+		margin: 22px;
+	}
+
+	.piedpage .liste{
+		margin: 22px;
+	}
+}

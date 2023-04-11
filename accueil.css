@@ -1,0 +1,210 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: sans-serif;
+}
+
+.max-width{
+	max-width: 1300px;
+	padding: 0 80px;
+	margin: auto;
+}
+
+/*Barre navigation*/
+.navbar
+{
+	position: fixed;
+	width: 100%;
+	padding: 30px 0;
+	font-family: sans-serif;
+}
+
+.navbar .max-width{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar .logo a{
+	color: #fff;
+	font-size: 35px;
+	font-weight: 600;
+}
+
+.navbar .logo a span{
+	color: #960000;
+}
+
+.navbar .menu li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+
+.navbar .menu li a{
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.navbar .menu li a::after{
+	content: '';
+	height: 3px;
+	width: 0;
+	background: #960000;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition:0.5s;
+}
+
+.navbar .menu li a:hover:after{
+	width: 100%;
+}
+
+
+.Accueil{
+	display: flex;
+	background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(images/fondAccueil.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	min-height: 500px;
+	text-align: center;
+}
+
+.Accueil h1{
+	font-size: 70px;
+	margin-top: 80px;
+}
+.Accueil p{
+	margin: 20px auto;
+	font-weight: 100;
+	line-height: 25px;
+}
+
+.Accueil button{
+	width: 200px;
+	padding: 15px 0;
+	text-align: center;
+	margin: 20px 10px;
+	border-radius: 25px;
+	font-weight: bold;
+	border: 2px solid #960000;
+	background: transparent;
+	color: #fff;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+	text-transform: uppercase;
+}
+
+.Accueil span{
+	background: #960000;
+	height: 100%;
+	width: 0;
+	border-radius: 25px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	transition: 0.5s;
+}
+
+.Accueil button:hover span{
+	width: 100%;
+}
+.Accueil button:hover{
+	border: none;
+}
+
+.BoutonMenu{
+	color: #fff;
+    font-size: 20px;
+	display: none;
+	cursor: pointer;
+}
+
+.BoutonMenu i{
+	cursor: pointer;
+}
+
+
+@media (max-width : 930px){
+	.max-width{
+		padding: 0 50px;
+	}
+	
+	.BoutonMenu{
+		color: #fff;
+		font-size: 30px;
+		cursor: pointer;
+		display: block;
+		z-index: 999;
+	}
+	
+	.BoutonMenu i.active:before{
+		content: "\f00d";
+	}
+	
+	.navbar .menu{
+		position: fixed;
+		height: 100vh;
+		width: 100%;
+		right: -100%;
+		z-index:999;
+		top: 0;
+		background: #111;
+		text-align: center;
+		padding-top: 100px;
+		transition: all 0.3s ease;
+	}
+	
+	.navbar .menu.active{
+		right:0;
+	}
+	
+	.navbar .menu li{
+		display: block;
+	}
+	.navbar .menu li a{
+		display: inline-block;
+		margin: 20px 0;
+		font-size: 25px;
+	}
+	
+	.navbar .menu li a::after{
+		content: '';
+		height: 2px;
+		width: 0;
+		background: #960000;
+		position: absolute;
+		right: 0;
+		bottom: 10px;
+		transition: 0.5s;
+	}
+
+	.navbar .menu li a:hover:after{
+		width: 100%;
+	}
+	
+	.Accueil h1{
+		font-size: 45px;
+		margin-top: 40px;
+	}
+	
+	.Accueil p{
+		margin: 10px auto;
+		font-weight: 100;
+		line-height: 12px;
+	}
+	
+	.Accueil button.active{
+		display: none;
+	}
+	
+}
